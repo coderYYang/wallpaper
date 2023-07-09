@@ -2,13 +2,19 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-02 16:16:18
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-04 20:48:58
+ * @LastEditTime: 2023-07-09 17:20:32
  * @FilePath: /wallpaper/src/renderer/src/views/Home.vue
- * @Description:
+ * @Description: 壁纸首页
 -->
 <template>
   <main>
-    <img src="2.jpeg" alt="" class="aspect-video nodrag" draggable="false" @click="handleClick" />
+    <img
+      src="http://localhost:3000/wallpaper/2.jpeg"
+      alt=""
+      class="aspect-video nodrag"
+      draggable="false"
+      @click="handleClick"
+    />
     <div
       class="cursor-pointer bg-gray-200 text-center py-3 m-3 rounded-lg hover:bg-gray-300 duration-500 opacity-80 shadow-sm nodrag"
       @click="handleDownload"
