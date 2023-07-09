@@ -1,3 +1,11 @@
+/*
+ * @Author: yy 691335336@qq.com
+ * @Date: 2023-07-09 18:43:41
+ * @LastEditors: yy 691335336@qq.com
+ * @LastEditTime: 2023-07-09 18:43:41
+ * @FilePath: /wallpaper/.eslintrc.cjs
+ * @Description:
+ */
 /* eslint-env node */
 require('@rushstack/eslint-patch/modern-module-resolution')
 
@@ -19,7 +27,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
     '@typescript-eslint/explicit-function-return-type': 'error',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'none',
     '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-non-null-assertion': 'off',
