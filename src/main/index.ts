@@ -2,7 +2,7 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-02 16:08:56
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-04 18:15:40
+ * @LastEditTime: 2023-07-16 16:52:41
  * @FilePath: /wallpaper/src/main/index.ts
  * @Description:
  */
@@ -19,6 +19,7 @@ function createWindow(): void {
     frame: false,
     // 禁止缩放
     resizable: false,
+    skipTaskbar: true,
     show: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
