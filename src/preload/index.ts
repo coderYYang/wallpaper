@@ -7,7 +7,9 @@ const api = {
     ipcRenderer.send('setWallpaper', url)
   },
   // 下载壁纸
-  download: (url: string): void => {}
+  downloadImage: (url: string): void => {
+    ipcRenderer.send('downloadImage', url)
+  }
 }
 
 if (process.contextIsolated) {

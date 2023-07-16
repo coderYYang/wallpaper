@@ -2,7 +2,7 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-02 16:16:18
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-09 18:47:48
+ * @LastEditTime: 2023-07-13 20:16:34
  * @FilePath: /wallpaper/src/renderer/src/views/Home.vue
  * @Description: 壁纸首页
 -->
@@ -23,7 +23,9 @@
     </div>
     <div class="mx-3 text-xs text-gray-700 flex justify-between items-center">
       <div>杨杨与Bug</div>
-      <div class="hover:font-bold cursor-pointer text-sm nodrag">下载壁纸</div>
+      <div class="hover:font-bold cursor-pointer text-sm nodrag" @click="downloadImage">
+        下载壁纸
+      </div>
     </div>
   </main>
 </template>
@@ -36,7 +38,7 @@ import useWallpaper from '@renderer/hooks/useWallpaper'
 import { useConfig } from '@renderer/store/useConfig'
 
 const { config } = useConfig()
-const { setWallpaper } = useWallpaper()
+const { setWallpaper, downloadImage } = useWallpaper()
 
 const img = ref<HTMLImageElement>()
 
@@ -49,9 +51,7 @@ const getRandomImage = async (): Promise<void> => {
   const loading = ElLoading.service({ background: 'rgba(255, 255, 255, 0.2)' })
   config.url = res.data
   img.value!.src = config.url
-  img.value!.addEventListener('load', () => {
-    loading.close()
-  })
+  img.value!.addEventListener('load', () => loading.close())
 }
 
 onMounted(() => {

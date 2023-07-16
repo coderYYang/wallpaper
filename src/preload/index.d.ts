@@ -6,7 +6,8 @@ declare global {
     api: {
       // 设置壁纸
       setWallpaper: (url: string) => void
-      download: (url: string) => void
+      // 下载壁纸
+      downloadImage: (url: string) => void
     }
   }
 }

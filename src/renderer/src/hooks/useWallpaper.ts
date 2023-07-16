@@ -2,7 +2,7 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-09 18:42:20
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-09 18:49:58
+ * @LastEditTime: 2023-07-12 13:43:55
  * @FilePath: /wallpaper/src/renderer/src/hooks/useWallpaper.ts
  * @Description: 壁纸操作
  */
@@ -18,5 +18,13 @@ export default () => {
     window.api.setWallpaper(config.url)
   }
 
-  return { setWallpaper }
+  /**
+   * @description: 下载壁纸
+   * @return {*}
+   */
+  const downloadImage = (): void => {
+    window.api.downloadImage(config.url)
+  }
+
+  return { setWallpaper, downloadImage }
 }
