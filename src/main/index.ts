@@ -2,7 +2,7 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-02 16:08:56
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-16 16:52:41
+ * @LastEditTime: 2023-07-16 16:55:59
  * @FilePath: /wallpaper/src/main/index.ts
  * @Description:
  */
@@ -46,6 +46,8 @@ function createWindow(): void {
 }
 
 app.whenReady().then(() => {
+  // 隐藏苹果dock图标
+  if (process.platform == 'darwin') app.dock.hide()
   electronApp.setAppUserModelId('com.electron')
 
   app.on('browser-window-created', (_, window) => {
