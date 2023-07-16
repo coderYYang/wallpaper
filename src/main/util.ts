@@ -2,7 +2,7 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-12 13:48:20
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-16 14:51:39
+ * @LastEditTime: 2023-07-16 16:15:04
  * @FilePath: /wallpaper/src/main/util.ts
  * @Description: 下载文件方法
  */
@@ -12,7 +12,6 @@ import fetch from 'node-fetch'
 import { createWriteStream } from 'node:fs'
 import { pipeline } from 'node:stream'
 import { promisify } from 'node:util'
-import { resolve } from 'path'
 
 export const downloadFile = async (url: string, localFile: string) => {
   const streamPipeline = promisify(pipeline)
