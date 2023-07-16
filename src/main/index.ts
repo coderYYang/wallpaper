@@ -2,7 +2,7 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-02 16:08:56
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-16 16:55:59
+ * @LastEditTime: 2023-07-16 16:57:48
  * @FilePath: /wallpaper/src/main/index.ts
  * @Description:
  */
@@ -10,7 +10,9 @@ import { app, shell, BrowserWindow } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
+
 import './ipcMain'
+import { createTray } from './tray'
 function createWindow(): void {
   const mainWindow = new BrowserWindow({
     width: 400,
@@ -46,6 +48,7 @@ function createWindow(): void {
 }
 
 app.whenReady().then(() => {
+  createTray()
   // 隐藏苹果dock图标
   if (process.platform == 'darwin') app.dock.hide()
   electronApp.setAppUserModelId('com.electron')

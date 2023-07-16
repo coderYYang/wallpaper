@@ -2,7 +2,7 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-16 16:51:39
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-16 16:53:40
+ * @LastEditTime: 2023-07-16 16:58:17
  * @FilePath: /wallpaper/src/main/tray.ts
  * @Description:
  */
@@ -18,7 +18,7 @@ const createTray = () => {
     )
   )
   const contextMenu = Menu.buildFromTemplate([{ label: '退出', role: 'quit' }])
-  tray.setToolTip('杨杨大叔桌面壁纸软件')
+  tray.setToolTip('杨杨桌面壁纸软件')
   tray.setContextMenu(contextMenu)
 }
 
