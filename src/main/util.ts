@@ -2,7 +2,7 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-12 13:48:20
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-12 14:55:43
+ * @LastEditTime: 2023-07-16 14:51:39
  * @FilePath: /wallpaper/src/main/util.ts
  * @Description: 下载文件方法
  */
@@ -14,8 +14,7 @@ import { pipeline } from 'node:stream'
 import { promisify } from 'node:util'
 import { resolve } from 'path'
 
-export const downloadFile = async (url: string, toFile?: string) => {
-  const localFile = toFile || resolve(__dirname, '../../wallpaper', url.split('/').pop()!)
+export const downloadFile = async (url: string, localFile: string) => {
   const streamPipeline = promisify(pipeline)
   const response = await fetch(url)
   if (!response.ok) {

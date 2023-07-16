@@ -2,7 +2,7 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-02 15:46:42
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-09 18:26:32
+ * @LastEditTime: 2023-07-16 14:20:02
  * @FilePath: /wallpaper/src/renderer/src/App.vue
  * @Description: app.vue
 -->
@@ -12,9 +12,11 @@ import Navbar from './components/Navbar.vue'
 
 <template>
   <Suspense>
-    <main>
+    <main class="flex flex-col h-screen">
       <Navbar />
-      <router-view />
+      <router-view #default="{ Component }">
+        <Component :is="Component" class="flex-1" />
+      </router-view>
     </main>
   </Suspense>
 </template>

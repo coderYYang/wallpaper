@@ -2,7 +2,7 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-02 16:25:01
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-02 16:32:42
+ * @LastEditTime: 2023-07-16 16:02:48
  * @FilePath: /wallpaper/src/renderer/src/components/Navbar.vue
  * @Description: 导航栏
 -->
@@ -13,15 +13,15 @@
       <pic
         theme="outline"
         size="20"
-        fill="#333"
-        class="cursor-pointer nodrag"
+        class="cursor-pointer nodrag text-gray-500"
+        :class="{ 'icon-color': $route.name == 'Home' }"
         @click="$router.push('/')"
       />
       <setting-one
         theme="outline"
         size="20"
-        fill="#333"
-        class="cursor-pointer nodrag"
+        class="cursor-pointer nodrag text-gray-500"
+        :class="{ 'icon-color': $route.name == 'Setting' }"
         @click="$router.push('setting')"
       />
     </section>
@@ -32,4 +32,8 @@
 import { Pic, SettingOne } from '@icon-park/vue-next'
 </script>
 
-<style scoped></style>
+<style scoped>
+.icon-color {
+  @apply text-orange-600;
+}
+</style>

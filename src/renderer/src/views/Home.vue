@@ -2,7 +2,7 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-07-02 16:16:18
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-07-13 20:16:34
+ * @LastEditTime: 2023-07-16 15:21:20
  * @FilePath: /wallpaper/src/renderer/src/views/Home.vue
  * @Description: 壁纸首页
 -->
@@ -16,7 +16,7 @@
       @click="getRandomImage"
     />
     <div
-      class="cursor-pointer bg-gray-200 text-center py-3 m-3 rounded-lg hover:bg-gray-300 duration-500 opacity-80 shadow-sm nodrag"
+      class="cursor-pointer bg-white text-center py-3 m-3 rounded-lg hover:shadow-sm hover:bg-gray-300 duration-500 opacity-80 nodrag"
       @click="setWallpaper"
     >
       设为壁纸
